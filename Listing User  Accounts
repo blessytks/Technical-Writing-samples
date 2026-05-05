@@ -1,0 +1,57 @@
+#Listing User and Group Accounts
+
+User account details such as account name, password, secondary groups, and default status are displayed. Similarly, for group accounts, group name, group ID, and permissions are displayed.
+
+## Purpose
+To execute CLI commands to list the system user and group accounts and their associated permissions.
+
+## Before You Start
+Log in as an authorized user to execute the command described in this procedure. For more information on authorized users, see the authorization matrix in the system operating documentation.
+
+## Procedure
+
+
+1. **List the System User Accounts**
+   Execute the following command to view the user account information:
+   ```(syscli) user-mgmt list users
+   ```
+The following is a sample output:
+```+---------------+------------------------------------+  
+| Name          | Attributes                         |  
++---------------+------------------------------------+  
+| syssecadmin   | home: /home/syssecadmin            |  
+|               | shell: /opt/system/bin/syscli      |  
+|               | user-id: 10002                     |  
+|               | max-days: 180                      |  
+|               | min-days: 30                       |  
+|               | inactive-days: 30                  |  
+|               | warning-days: 10                   |  
+|               | expiry-date: -1                    |  
+|               | last-change: -1                    |  
+|               | secondary-groups: SecurityAdmin    |  
+|               | _sysumuser                         |  
+|               |                                    | 
+   ```
+2. **View the Details of a Specific User**
+   Execute the following command to view the details of a specific user:
+   ```(syscli) user-mgmt list users -u <username>
+   ```
+The following is an example output:
+``` +-----------+-------------------------------+  
+| Name      | Attributes                    |  
++-----------+-------------------------------+  
+| adminuser | home: /home/adminuser         |  
+|           | shell: /opt/system/bin/syscli |  
+|           | user-id: 10001                |  
+|           | max-days: 180                 |  
+|           | min-days: 30                  |  
+|           | inactive-days: 30             |  
+|           | warning-days: 10              |  
+|           | expiry-date: -1               |  
+|           | last-change: -1               |  
+|           | secondary-groups: SystemAdmin |  
+|           | _sysumuser                    |  
+|           | _sysne3sws                    |  
++-----------+-------------------------------+  
+   ```
+
