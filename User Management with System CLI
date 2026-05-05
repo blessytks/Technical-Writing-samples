@@ -1,0 +1,13 @@
+# User Management with System CLI
+
+In the system, CLI commands are used to list users and groups, set and reset user passwords, and lock and unlock user accounts.
+The system administrator can also manage lock threshold, lock time, and authenticate lock parameters using CLI commands.
+
+The following table provides the user names, generic permissions, and corresponding login shell access for executing CLI commands.
+
+### User-name and permissions
+
+| User-name  | Generic permission |
+| :--- | :---:| 
+| sysread | Commands that perform read operations. No access to commands that change the current state or parameter of any object in the system. | 
+| sysappladmin | Commands that have application-level access, but not system-level access. Commands that require system-level access are write operations for software management and state management, for which sysappladmin does not have access. |
